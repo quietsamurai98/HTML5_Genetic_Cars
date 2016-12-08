@@ -55,6 +55,7 @@ var world;
 var zoom = 70;
 
 var mutable_floor = false;
+var floor_type = 0;
 
 var maxFloorTiles = 200;
 var cw_floorTiles = new Array();
@@ -580,6 +581,11 @@ function cw_setMutationRange(range) {
 
 function cw_setMutableFloor(choice) {
   mutable_floor = (choice==1);
+}
+
+function cw_setFloorType(choice){
+  floor_type = choice;
+  cw_setMutableFloor(choice);
 }
 
 function cw_setGravity(choice) {
