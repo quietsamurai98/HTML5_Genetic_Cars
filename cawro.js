@@ -31,7 +31,7 @@ var minimapscale = 3;
 var minimapfogdistance = 0;
 var fogdistance = document.getElementById("minimapfog").style;
 
-var generationSize = 20;
+var generationSize = 25;
 var cw_carArray = new Array();
 var cw_carGeneration = new Array();
 var cw_carScores = new Array();
