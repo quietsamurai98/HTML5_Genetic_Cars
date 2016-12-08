@@ -19,8 +19,8 @@ function cw_createFloor() {
         //quarter pipe
         last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * (k/maxFloorTiles));
       } else if(floor_type==4) {
-        //quarter pipe
-        last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * Math.sin(k/10));
+        //sine wave
+        last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * Math.sin(k));
       }
       
     } else {
