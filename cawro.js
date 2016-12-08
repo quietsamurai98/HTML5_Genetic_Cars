@@ -941,6 +941,10 @@ function cw_resetPopulation() {
   lasteliteaverage = 0;
   swapPoint1 = 0;
   swapPoint2 = 0;
+  var newSize = prompt('Enter Population Size');
+  if (newSize!=null){
+    generationSize=newSize;
+  }
   cw_generationZero();
 }
 
@@ -960,9 +964,7 @@ function cw_resetWorld() {
 }
 
 function cw_confirmResetWorld() {
-  var newSize = prompt('Really reset world?\nEnter new population size:');
-  if(newSize!=null) {
-    generationSize = newSize;
+  if(confirm('Really reset world?')) {
     cw_resetWorld();
   } else {
     return false;
