@@ -215,9 +215,11 @@
       </div>
       <div>
         Floor:
-        <select id="floor" onchange="cw_setMutableFloor(this.options[this.selectedIndex].value)">
-          <option value="0" selected="selected">fixed</option>
-          <option value="1">mutable</option>
+        <select id="floor" onchange="cw_setFloorType(this.options[this.selectedIndex].value)">
+          <option value="0" selected="selected">Fixed random</option>
+          <option value="1">Mutable random</option>
+	  <option value="2">Flat</option>
+	  <option value="3">Quarter pipe</option>
         </select>
       </div>
       <div>
