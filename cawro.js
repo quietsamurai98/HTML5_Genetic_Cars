@@ -31,7 +31,7 @@ var minimapscale = 3;
 var minimapfogdistance = 0;
 var fogdistance = document.getElementById("minimapfog").style;
 
-var generationSize = 25;
+var generationSize = 20;
 var cw_carArray = new Array();
 var cw_carGeneration = new Array();
 var cw_carScores = new Array();
@@ -960,7 +960,9 @@ function cw_resetWorld() {
 }
 
 function cw_confirmResetWorld() {
-  if(confirm('Really reset world?')) {
+  var newSize = prompt('Really reset world?\nEnter new population size:');
+  if(newSize!=null) {
+    generationSize = newSize;
     cw_resetWorld();
   } else {
     return false;
