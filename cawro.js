@@ -346,10 +346,6 @@ function cw_createRandomCar() {
 /* ==== Generation ========================================================= */
 
 function cw_generationZero() {
-  var newSize = prompt('Enter Population Size');
-  if (newSize!=null){
-    generationSize=newSize;
-  }
   for(var k = 0; k < generationSize; k++) {
     var car_def = cw_createRandomCar();
     car_def.index = k;
@@ -1023,7 +1019,10 @@ function cw_init() {
   // clone silver dot and health bar
   var mmm  = document.getElementsByName('minimapmarker')[0];
   var hbar = document.getElementsByName('healthbar')[0];
-
+  var newSize = prompt('Enter Population Size');
+  if (newSize!=null){
+    generationSize=newSize;
+  }
   for(var k = 0; k < generationSize; k++) {
 
     // minimap markers
