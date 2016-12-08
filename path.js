@@ -8,8 +8,18 @@ function cw_createFloor() {
   Math.seedrandom(floorseed);
   for(var k = 0; k < maxFloorTiles; k++) {
     if (!mutable_floor) {
-      // keep old impossible tracks if not using mutable floors
-      last_tile = cw_createFloorTile(tile_position, (Math.random()*3 - 1.5) * 1.5*k/maxFloorTiles);
+      
+      if(floor_type==0) {
+        // keep old impossible tracks if not using mutable floors
+        last_tile = cw_createFloorTile(tile_position, (Math.random()*3 - 1.5) * 1.5*k/maxFloorTiles);
+      } else if(floor_type==2) {
+        //flat
+        last_tile = cw_createFloorTile(tile_position, 0);
+      } else if(floor_type==3) {
+        //quarter pipe
+        last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * (k/maxFloorTiles));
+      }
+      
     } else {
       // if path is mutable over races, create smoother tracks
       last_tile = cw_createFloorTile(tile_position, (Math.random()*3 - 1.5) * 1.2*k/maxFloorTiles);
