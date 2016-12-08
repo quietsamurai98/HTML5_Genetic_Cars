@@ -20,7 +20,7 @@ function cw_createFloor() {
         last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * (k/maxFloorTiles));
       } else if(floor_type==4) {
         //sine wave
-        last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * Math.sin((k*Math.PI)/720));
+        last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * Math.sin((k*Math.PI)/180));
       }
       
     } else {
