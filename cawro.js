@@ -346,6 +346,10 @@ function cw_createRandomCar() {
 /* ==== Generation ========================================================= */
 
 function cw_generationZero() {
+  var newSize = prompt('Enter Population Size');
+  if (newSize!=null){
+    generationSize=newSize;
+  }
   for(var k = 0; k < generationSize; k++) {
     var car_def = cw_createRandomCar();
     car_def.index = k;
@@ -941,10 +945,6 @@ function cw_resetPopulation() {
   lasteliteaverage = 0;
   swapPoint1 = 0;
   swapPoint2 = 0;
-  var newSize = prompt('Enter Population Size');
-  if (newSize!=null){
-    generationSize=newSize;
-  }
   cw_generationZero();
 }
 
