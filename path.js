@@ -18,7 +18,6 @@ function cw_createFloor() {
       } else if(floor_type==3) {
         //quarter pipe
         last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * (k/maxFloorTiles));
-      }
       } else if(floor_type==4) {
         //quarter pipe
         last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * Math.sin(k/10));
