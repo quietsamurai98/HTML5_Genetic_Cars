@@ -22,6 +22,9 @@ function cw_createFloor() {
         //sine wave
         last_tile = cw_createFloorTile(tile_position, -1*Math.sin(k/4.0)/(150/k));
       } else if(floor_type==5) {
+        //Smooth curl
+        last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * ((k*k)/40000);
+      }else if(floor_type==6) {
         //Jagged curl
         last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * ((k*k)/40000) + (k/127)*2*(k%2-0.5));
       }
