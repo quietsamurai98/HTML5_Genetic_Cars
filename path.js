@@ -55,10 +55,10 @@ function cw_createFloorTile(position, angle) {
   fix_def.friction = 0.75;
 
   var coords = new Array();
-  coords.push(new b2Vec2(0,groundPieceHeight));
-  coords.push(new b2Vec2(0,-groundPieceHeight/2));
-  coords.push(new b2Vec2(groundPieceWidth,-groundPieceHeight/2));
-  coords.push(new b2Vec2(groundPieceWidth,groundPieceHeight));
+  coords.push(new b2Vec2(0,0));
+  coords.push(new b2Vec2(0,-groundPieceHeight));
+  coords.push(new b2Vec2(groundPieceWidth,-groundPieceHeight));
+  coords.push(new b2Vec2(groundPieceWidth,0));
 
   var center = new b2Vec2(0,0);
 
