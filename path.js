@@ -40,6 +40,8 @@ function cw_createFloor() {
     last_fixture = last_tile.GetFixtureList();
     last_world_coords = last_tile.GetWorldPoint(last_fixture.GetShape().m_vertices[3]);
     tile_position = last_world_coords;
+    tile_position.add(last_tile.GetWorldPoint(last_fixture.GetShape().m_vertices[2]));
+    tile_position.multiply(2.0);
   }
   world.finishLine = tile_position.x;
 }
