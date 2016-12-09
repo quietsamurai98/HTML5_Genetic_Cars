@@ -40,8 +40,6 @@ function cw_createFloor() {
     last_fixture = last_tile.GetFixtureList();
     last_world_coords = last_tile.GetWorldPoint(last_fixture.GetShape().m_vertices[3]);
     tile_position = last_world_coords;
-    tile_position.Add(last_tile.GetWorldPoint(last_fixture.GetShape().m_vertices[2]));
-    tile_position.Multiply(0.5);
   }
   world.finishLine = tile_position.x;
 }
@@ -54,13 +52,13 @@ function cw_createFloorTile(position, angle) {
   var body = world.CreateBody(body_def);
   fix_def = new b2FixtureDef();
   fix_def.shape = new b2PolygonShape();
-  fix_def.friction = 0.5;
+  fix_def.friction = 0.75;
 
   var coords = new Array();
-  coords.push(new b2Vec2(0,groundPieceHeight/2));
+  coords.push(new b2Vec2(0,groundPieceHeight));
   coords.push(new b2Vec2(0,-groundPieceHeight/2));
   coords.push(new b2Vec2(groundPieceWidth,-groundPieceHeight/2));
-  coords.push(new b2Vec2(groundPieceWidth,groundPieceHeight/2));
+  coords.push(new b2Vec2(groundPieceWidth,groundPieceHeight));
 
   var center = new b2Vec2(0,0);
 
