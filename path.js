@@ -24,9 +24,12 @@ function cw_createFloor() {
       } else if(floor_type==5) {
         //Smooth curl
         last_tile = cw_createFloorTile(tile_position, Math.min((Math.PI/2) * (Math.pow(k,12)/Math.pow(170,12)),Math.PI/2) );
-      }else if(floor_type==6) {
+      } else if(floor_type==6) {
         //Jagged curl
         last_tile = cw_createFloorTile(tile_position, (Math.PI/2) * ((k*k)/40000) + (k/127)*2*(k%2-0.5));
+      } else if(floor_type==7) {
+        //Jagged
+        last_tile = cw_createFloorTile(tile_position,(2*k/127)*(k%2-0.5));
       }
       
     } else {
