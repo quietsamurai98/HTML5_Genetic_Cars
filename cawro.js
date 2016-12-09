@@ -263,7 +263,7 @@ function cw_createChassisPart(body, vertex1, vertex2, density) {
 function cw_createChassis(vertex_list, density) {
   var body_def = new b2BodyDef();
   body_def.type = b2Body.b2_dynamicBody;
-  body_def.position.Set(0.0, 10.0);
+  body_def.position.Set(0.0, 4.0);
 
   var body = world.CreateBody(body_def);
 
